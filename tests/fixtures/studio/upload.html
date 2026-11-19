@@ -1,0 +1,36 @@
+<!doctype html>
+<html><body>
+  <button id="create">Create</button>
+  <div id="menu" hidden><button role="menuitem" id="upload">Upload videos</button></div>
+  <section id="form" hidden>
+    <label>Select video file <input aria-label="Select video file" type="file"></label>
+    <div role="textbox" aria-label="Title" contenteditable="true"></div>
+    <div role="textbox" aria-label="Description" contenteditable="true"></div>
+    <label><input type="radio" name="kids" aria-label="No, it's not made for kids">No, it's not made for kids</label>
+    <button id="next">Next</button>
+    <div id="visibility" hidden>
+      <label><input type="radio" name="privacy" value="public" aria-label="Public">Public</label>
+      <label><input type="radio" name="privacy" value="unlisted" aria-label="Unlisted">Unlisted</label>
+      <label><input type="radio" name="privacy" value="private" aria-label="Private">Private</label>
+      <button id="publish">Publish</button>
+    </div>
+  </section>
+  <div role="dialog" id="dialog" hidden><a href="https://youtube.com/shorts/aB3_-xYz012">Video link</a></div>
+  <pre id="result"></pre>
+  <script>
+    let step = 0;
+    document.querySelector('#create').onclick = () => document.querySelector('#menu').hidden = false;
+    document.querySelector('#upload').onclick = () => document.querySelector('#form').hidden = false;
+    document.querySelector('#next').onclick = () => {
+      step += 1;
+      if (step >= 2) document.querySelector('#visibility').hidden = false;
+    };
+    document.querySelector('#publish').onclick = () => {
+      const title = document.querySelector('[aria-label="Title"]').innerText;
+      const description = document.querySelector('[aria-label="Description"]').innerText;
+      const privacy = document.querySelector('[name="privacy"]:checked')?.value;
+      document.querySelector('#result').textContent = JSON.stringify({title, description, privacy});
+      document.querySelector('#dialog').hidden = false;
+    };
+  </script>
+</body></html>

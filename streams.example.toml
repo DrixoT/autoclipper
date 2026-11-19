@@ -1,0 +1,50 @@
+# Copy to ~/autoclipper-data/streams.toml (the CLI's default) or pass --config <file>.
+# Every setting below is optional except a [discover] section or at least one [[stream]].
+
+data_dir = "~/autoclipper-data"                  # database, buffers, logs, Chrome profile, models
+# volume = "/path/to/external-volume"            # optional; set data_dir inside it; capture pauses if unavailable or under 5 GB free
+# clips_dir = "~/Videos/autoclipper"             # working clips (default: <data_dir>/clips), kept 72 h
+ffmpeg = "/opt/homebrew/bin/ffmpeg"
+
+upload = true              # false: everything but YouTube; finished clips are kept as "saved" with meta.json
+privacy = "public"         # public, unlisted or private
+youtube_profile = "primary"   # use "backup" after authorizing it with autoclipper auth --profile backup
+slot_minutes = 15          # one regular post per slot (10 to 240)
+max_uploads_per_day = 60   # 1 to 100 (YouTube's Video Uploads bucket), per YouTube profile
+fast_lane = 0.8            # a candidate whose Jev rank (0..1) reaches this is posted at once; 1 turns it off
+min_gap_minutes = 5        # at least this long between any two posts on one profile, slot or fast lane
+landscape = false          # true: each posted Short also gets a 16:9 regular video (full frame, captions, a few
+                           # seconds more setup and reaction), posted on the same profile and privacy after the gap;
+                           # it counts toward max_uploads_per_day like any upload
+narrative = true           # the default: edit a 60–300 s full story and a 30–180 s Short inside it; false: short
+                           # moments only
+caption_variants = ["box", "emoji"]   # posts alternate: box = captions on a dark panel, plain title; emoji = stroked
+                           # captions, goofy emojis in every title; one entry turns the experiment off
+# variant_profiles = { box = "backup", emoji = "primary" }   # post each variant on its own channel; map every
+                           # variant, or leave it out (the default) to post all of them on youtube_profile
+# instagram_profiles = ["backup"]   # profiles whose public Shorts also become Reels (default: [youtube_profile])
+# instagram_account_id = "17841400000000000"   # link a professional account before enabling Reels
+learn = true               # false: results are still recorded, but only the hand-set weights and bars are used
+# learn_db = "~/autoclipper-data/learning.db"    # the record of candidates and results (default:
+                           # <data_dir>/learning.db); a long run should keep it outside the run folder
+
+# Live stream picking for one game. At most 5 streams in total, fixed [[stream]] entries included.
+[discover]
+game = "Grand Theft Auto VI"
+platforms = ["twitch", "kick"]   # YouTube is not discovered; pin a YouTube stream instead
+language = "en"
+min_viewers = 500
+refresh_minutes = 5
+# Always take a slot while live, whatever they play; never swapped out while live.
+pin = ["youtube:@IShowSpeed", { platform = "twitch", channel = "kaicenat", name = "Kai Cenat" }]
+# Next in line while live, in any game, in this order (one person on two platforms: the first entry wins).
+prefer = ["kick:xqc", "twitch:xqc", "twitch:jynxzi", "kick:adinross"]
+# Never watched, even when pinned or preferred.
+never = []
+
+# Fixed streams run whenever the daemon runs (with or without [discover]) and count against the 5.
+# [[stream]]
+# platform = "twitch"           # twitch, kick or youtube
+# channel = "kaicenat"          # YouTube: the @handle
+# name = "Kai Cenat"            # display name for titles and credits; defaults to the channel
+# pre_roll_s = 25               # seconds kept before the chat spike when the editor's window is unusable

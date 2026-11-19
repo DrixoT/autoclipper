@@ -1,0 +1,28 @@
+/graft/
+.ignore
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+
+# local configs and secrets (streams.example.toml stays tracked)
+/streams.toml
+/pilot.toml
+client_secret*.json
+.env
+
+# runtime data, if a data directory is ever pointed inside the repo
+chrome-profile/
+chrome-profiles/
+*.db
+*.db-*
+logs/
+buf/
+
+# rendered and captured media
+*.ts
+*.mp4
+
+!streams.example.toml
+!tests/fixtures/
