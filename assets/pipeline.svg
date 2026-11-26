@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 436" width="960" height="436" role="img" aria-label="autoclipper end-to-end architecture diagram">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="960" y2="436" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0e1017"/>
+      <stop offset="100%" stop-color="#131620"/>
+    </linearGradient>
+    <linearGradient id="spikeFill" x1="0" y1="138" x2="0" y2="174" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.02"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#6d758c"/>
+    </marker>
+    <marker id="arrowYellow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#ffe14d"/>
+    </marker>
+  </defs>
+
+  <!-- Studio card -->
+  <rect x="0.5" y="0.5" width="959" height="435" rx="16" fill="url(#cardBg)" stroke="#252a38"/>
+
+  <!-- Header -->
+  <text x="28" y="38" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">HOW AUTOCLIPPER WORKS</text>
+
+  <!-- Legend pills -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600">
+    <rect x="498" y="21" width="138" height="24" rx="12" fill="#34d399" fill-opacity="0.14" stroke="#34d399" stroke-opacity="0.35"/>
+    <circle cx="513" cy="33" r="3.5" fill="#34d399"/>
+    <text x="524" y="36.5" fill="#6ee7b7">LOCAL · $0 COST</text>
+
+    <rect x="646" y="21" width="150" height="24" rx="12" fill="#a78bfa" fill-opacity="0.15" stroke="#a78bfa" stroke-opacity="0.38"/>
+    <circle cx="661" cy="33" r="3.5" fill="#a78bfa"/>
+    <text x="672" y="36.5" fill="#c4b5fd">API · 2 SMALL CALLS</text>
+
+    <rect x="806" y="21" width="126" height="24" rx="12" fill="#e11d48" fill-opacity="0.16" stroke="#f43f5e" stroke-opacity="0.40"/>
+    <circle cx="821" cy="33" r="3.5" fill="#f43f5e"/>
+    <text x="832" y="36.5" fill="#fda4af">GUARDS &amp; LOOP</text>
+  </g>
+
+  <line x1="28" y1="58" x2="932" y2="58" stroke="#252a38"/>
+
+  <!-- Column connectors -->
+  <line x1="234" y1="184" x2="255" y2="184" stroke="#6d758c" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="466" y1="184" x2="487" y2="184" stroke="#6d758c" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="698" y1="184" x2="719" y2="184" stroke="#6d758c" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- Column 1: Watch -->
+  <rect x="28" y="72" width="206" height="224" rx="12" fill="#181c28" stroke="#2a3042"/>
+  <text x="42" y="96" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700">1 · WATCH</text>
+  <rect x="168" y="81" width="54" height="20" rx="10" fill="#34d399" fill-opacity="0.14" stroke="#34d399" stroke-opacity="0.35"/>
+  <text x="195" y="94.5" text-anchor="middle" fill="#6ee7b7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600">LOCAL</text>
+
+  <rect x="40" y="112" width="182" height="58" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="52" y="129" fill="#6ee7b7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="600">[discover]</text>
+  <text x="52" y="145" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Twitch · Kick · YT pin</text>
+  <text x="52" y="160" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">≤5 streams · clip filter</text>
+
+  <rect x="40" y="178" width="182" height="50" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="52" y="198" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Streamlink + ffmpeg</text>
+  <text x="52" y="215" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">4 s .ts · 10-min ring</text>
+
+  <rect x="40" y="236" width="182" height="48" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="52" y="255" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Chat readers (no login)</text>
+  <text x="52" y="272" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">IRC · WS · YT Live chat</text>
+
+  <!-- Column 2: Detect & Gate -->
+  <rect x="260" y="72" width="206" height="224" rx="12" fill="#181c28" stroke="#2a3042"/>
+  <text x="274" y="96" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700">2 · DETECT</text>
+  <rect x="400" y="81" width="54" height="20" rx="10" fill="#34d399" fill-opacity="0.14" stroke="#34d399" stroke-opacity="0.35"/>
+  <text x="427" y="94.5" text-anchor="middle" fill="#6ee7b7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600">LOCAL</text>
+
+  <rect x="272" y="112" width="182" height="76" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="284" y="129" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Chat velocity</text>
+  <text x="442" y="129" text-anchor="end" fill="#f43f5e" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600">z ≥ 2.5</text>
+  <!-- Mini spike waveform -->
+  <line x1="284" y1="147" x2="442" y2="147" stroke="#f43f5e" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+  <path d="M 284 166 L 326 165 L 344 163 L 358 166 L 372 135 L 385 162 L 402 165 L 442 166 L 442 172 L 284 172 Z" fill="url(#spikeFill)"/>
+  <path d="M 284 166 L 326 165 L 344 163 L 358 166 L 372 135 L 385 162 L 402 165 L 442 166" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="372" cy="135" r="3" fill="#ffe14d"/>
+  <text x="284" y="180" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5">≥8 chatters · ≥25% match</text>
+
+  <rect x="272" y="196" width="182" height="42" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="284" y="213" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Lossless ring copy</text>
+  <text x="284" y="229" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">raw.ts (no re-encode)</text>
+
+  <rect x="272" y="244" width="182" height="40" rx="8" fill="#12151f" stroke="#34d399" stroke-opacity="0.32"/>
+  <text x="284" y="260" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Freeze + silence gate</text>
+  <text x="284" y="275" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Drop if &gt;50% frozen/mute</text>
+
+  <!-- Column 3: Rank & Edit -->
+  <rect x="492" y="72" width="206" height="224" rx="12" fill="#181c28" stroke="#2a3042"/>
+  <text x="506" y="96" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700">3 · RANK &amp; EDIT</text>
+  <rect x="622" y="81" width="64" height="20" rx="10" fill="#a78bfa" fill-opacity="0.15" stroke="#a78bfa" stroke-opacity="0.38"/>
+  <text x="654" y="94.5" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600">2 CALLS</text>
+
+  <rect x="504" y="112" width="182" height="78" rx="8" fill="#12151f" stroke="#a78bfa" stroke-opacity="0.45"/>
+  <text x="516" y="129" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700">TypeSafe Jev</text>
+  <rect x="640" y="118" width="36" height="16" rx="8" fill="#a78bfa" fill-opacity="0.18"/>
+  <text x="658" y="129" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9" font-weight="600">API</text>
+  <text x="516" y="146" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">4 frames + chat → 6 scores</text>
+  <text x="516" y="162" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">nude ≥ 0.3 → fail-closed</text>
+  <text x="516" y="178" fill="#ffe14d" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">slot ≥ 0.45 · fast ≥ 0.80</text>
+
+  <rect x="504" y="196" width="182" height="40" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="516" y="212" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">faster-whisper (local)</text>
+  <text x="516" y="227" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Word-level timestamps</text>
+
+  <rect x="504" y="242" width="182" height="42" rx="8" fill="#12151f" stroke="#a78bfa" stroke-opacity="0.45"/>
+  <text x="516" y="259" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700">Claude Haiku</text>
+  <rect x="640" y="248" width="36" height="16" rx="8" fill="#a78bfa" fill-opacity="0.18"/>
+  <text x="658" y="259" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9" font-weight="600">API</text>
+  <text x="516" y="275" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Story · Short · hook · title</text>
+
+  <!-- Column 4: Render & Publish -->
+  <rect x="724" y="72" width="208" height="224" rx="12" fill="#181c28" stroke="#2a3042"/>
+  <text x="738" y="96" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700">4 · RENDER &amp; POST</text>
+  <rect x="866" y="81" width="54" height="20" rx="10" fill="#e11d48" fill-opacity="0.16" stroke="#f43f5e" stroke-opacity="0.40"/>
+  <text x="893" y="94.5" text-anchor="middle" fill="#fda4af" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600">MACOS</text>
+
+  <rect x="736" y="112" width="184" height="46" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="748" y="130" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Pillow + VideoToolbox</text>
+  <text x="748" y="147" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">-14 LUFS · box / emoji</text>
+
+  <rect x="736" y="166" width="184" height="58" rx="8" fill="#12151f" stroke="#ffe14d" stroke-opacity="0.38"/>
+  <text x="748" y="183" fill="#ffe14d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700">YouTube Shorts (9:16)</text>
+  <text x="748" y="199" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Data API v3 → Studio</text>
+  <text x="748" y="214" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Per-variant profiles</text>
+
+  <rect x="736" y="232" width="184" height="52" rx="8" fill="#12151f" stroke="#252a38"/>
+  <text x="748" y="249" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Optional companions</text>
+  <text x="748" y="264" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">16:9 video (1920×1080)</text>
+  <text x="748" y="278" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Instagram Reels (≤50 s)</text>
+
+  <!-- Feedback arrow from Learning Loop back to Rank & Edit -->
+  <line x1="595" y1="322" x2="595" y2="300" stroke="#ffe14d" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrowYellow)"/>
+  <text x="605" y="313" fill="#ffe14d" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">refits weights, bars &amp; examples</text>
+
+  <!-- Bottom Rail Left: Runtime Guards -->
+  <rect x="28" y="322" width="438" height="96" rx="12" fill="#181c28" stroke="#34d399" stroke-opacity="0.35"/>
+  <text x="44" y="344" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">RUNTIME GUARDS</text>
+  <text x="450" y="344" text-anchor="end" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">SINGLE MAC · LAUNCHD</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#d1fae5">
+    <rect x="44" y="355" width="144" height="22" rx="6" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.25"/>
+    <text x="116" y="369.5" text-anchor="middle">max_uploads_per_day</text>
+
+    <rect x="196" y="355" width="122" height="22" rx="6" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.25"/>
+    <text x="257" y="369.5" text-anchor="middle">min_gap_minutes</text>
+
+    <rect x="326" y="355" width="124" height="22" rx="6" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.25"/>
+    <text x="388" y="369.5" text-anchor="middle">30 m strike check</text>
+
+    <rect x="44" y="384" width="126" height="22" rx="6" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.25"/>
+    <text x="107" y="398.5" text-anchor="middle">5 GB disk guard</text>
+
+    <rect x="178" y="384" width="134" height="22" rx="6" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.25"/>
+    <text x="245" y="398.5" text-anchor="middle">Keychain secrets</text>
+
+    <rect x="320" y="384" width="130" height="22" rx="6" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.25"/>
+    <text x="385" y="398.5" text-anchor="middle">Never post twice</text>
+  </g>
+
+  <!-- Bottom Rail Right: Learning Loop -->
+  <rect x="492" y="322" width="440" height="96" rx="12" fill="#181c28" stroke="#ffe14d" stroke-opacity="0.35"/>
+  <text x="508" y="344" fill="#ffe14d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">LEARNING LOOP</text>
+  <text x="916" y="344" text-anchor="end" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">learning.db</text>
+
+  <text x="508" y="366" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">Records scored candidates, verdicts &amp; 1 · 6 · 24 · 72 h snapshots</text>
+  <text x="508" y="385" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">Bounded refits (weights 0.05–0.40, F ≥ 3.5) · ~1 in 10 exploration</text>
+  <text x="508" y="403" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">Top 3 posts replace prompt examples · zero extra LLM calls</text>
+</svg>

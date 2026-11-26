@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 456" width="960" height="456" role="img" aria-label="Rendered output formats and A/B caption variants">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="960" y2="456" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0e1017"/>
+      <stop offset="100%" stop-color="#131620"/>
+    </linearGradient>
+    <linearGradient id="blurBackdrop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#221938"/>
+      <stop offset="50%" stop-color="#151926"/>
+      <stop offset="100%" stop-color="#0f121b"/>
+    </linearGradient>
+    <linearGradient id="skyScene" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1438"/>
+      <stop offset="55%" stop-color="#6b215e"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="frameShadowTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="frameShadowBot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clipPhoneA">
+      <rect x="57" y="82" width="171" height="304" rx="14"/>
+    </clipPath>
+    <clipPath id="clipPhoneB">
+      <rect x="315" y="82" width="171" height="304" rx="14"/>
+    </clipPath>
+    <clipPath id="clipWide">
+      <rect x="544" y="82" width="388" height="218" rx="10"/>
+    </clipPath>
+    <clipPath id="clipThumb">
+      <rect x="544" y="314" width="176" height="99" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- Studio Card -->
+  <rect x="0.5" y="0.5" width="959" height="455" rx="16" fill="url(#cardBg)" stroke="#252a38"/>
+
+  <!-- Header -->
+  <text x="28" y="37" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">RENDERED OUTPUTS &amp; A/B PRESENTATION VARIANTS</text>
+  <text x="932" y="37" text-anchor="end" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10">9:16 SHORTS · REELS · OPTIONAL 16:9 COMPANION</text>
+
+  <!-- ==================== COLUMN 1: BOX VARIANT ==================== -->
+  <text x="142.5" y="68" text-anchor="middle" fill="#6ee7b7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700">VARIANT A · "box"</text>
+
+  <g clip-path="url(#clipPhoneA)">
+    <rect x="57" y="82" width="171" height="304" fill="url(#blurBackdrop)"/>
+    <!-- Subtle blurred color hints in top/bottom bands -->
+    <circle cx="100" cy="126" r="46" fill="#be185d" fill-opacity="0.18"/>
+    <circle cx="190" cy="336" r="52" fill="#ea580c" fill-opacity="0.16"/>
+
+    <!-- Top & bottom soft frame shadow (render.py _frame_shadow) -->
+    <rect x="57" y="172" width="171" height="14" fill="url(#frameShadowTop)"/>
+    <rect x="57" y="282" width="171" height="14" fill="url(#frameShadowBot)"/>
+
+    <!-- Hook card (white rounded pill with dark text) -->
+    <rect x="74" y="120" width="137" height="34" rx="7" fill="#ffffff"/>
+    <text x="142.5" y="135" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.8" font-weight="800">HE ACTUALLY</text>
+    <text x="142.5" y="146.5" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.8" font-weight="800">CLEARED THAT</text>
+
+    <!-- 16:9 Stream Frame (171 x 96) -->
+    <rect x="57" y="186" width="171" height="96" fill="url(#skyScene)"/>
+    <!-- Sun -->
+    <circle cx="148" cy="236" r="16" fill="#ffe14d" fill-opacity="0.85"/>
+    <!-- Horizon skyline -->
+    <path d="M 57 244 L 74 244 L 74 232 L 86 232 L 86 244 L 98 244 L 98 225 L 114 225 L 114 244 L 126 244 L 126 236 L 138 236 L 138 244 L 166 244 L 166 228 L 180 228 L 180 244 L 194 244 L 194 235 L 210 235 L 210 244 L 228 244 L 228 282 L 57 282 Z" fill="#120d26"/>
+    <!-- Highway road perspective -->
+    <polygon points="128,244 156,244 218,282 72,282" fill="#1e2235"/>
+    <line x1="142" y1="246" x2="142" y2="282" stroke="#ffe14d" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- Corner facecam overlay -->
+    <rect x="63" y="192" width="36" height="25" rx="3" fill="#0f172a" fill-opacity="0.90" stroke="#ffffff" stroke-opacity="0.35" stroke-width="0.8"/>
+    <circle cx="81" cy="202" r="5" fill="#94a3b8"/>
+    <path d="M 72 216 C 72 210, 90 210, 90 216" fill="#94a3b8"/>
+    <circle cx="69" cy="197" r="2" fill="#f43f5e"/>
+
+    <!-- Box-style dark panel captions (clear of right Shorts action column) -->
+    <rect x="92" y="301" width="76" height="19" rx="4" fill="#000000" fill-opacity="0.78"/>
+    <text x="130" y="314" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800">
+      <tspan fill="#ffffff">NO </tspan><tspan fill="#ffe14d">WAY</tspan>
+    </text>
+    <rect x="108" y="323" width="44" height="19" rx="4" fill="#000000" fill-opacity="0.78"/>
+    <text x="130" y="336" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800">BRO</text>
+
+    <!-- Faint Shorts UI safe-area guides (right action icons + bottom title) -->
+    <g fill="#ffffff" fill-opacity="0.22">
+      <circle cx="212" cy="296" r="5.5"/>
+      <circle cx="212" cy="316" r="5.5"/>
+      <circle cx="212" cy="336" r="5.5"/>
+      <rect x="66" y="362" width="78" height="4" rx="2"/>
+      <rect x="66" y="370" width="52" height="3.5" rx="1.75"/>
+    </g>
+  </g>
+  <rect x="57" y="82" width="171" height="304" rx="14" fill="none" stroke="#34d399" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <rect x="28" y="396" width="230" height="42" rx="8" fill="#181c28" stroke="#2a3042"/>
+  <text x="143" y="413" text-anchor="middle" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Dark panel · Plain title</text>
+  <text x="143" y="429" text-anchor="middle" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Alternates for A/B comparison</text>
+
+  <!-- ==================== COLUMN 2: EMOJI VARIANT ==================== -->
+  <text x="400.5" y="68" text-anchor="middle" fill="#ffe14d" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700">VARIANT B · "emoji"</text>
+
+  <g clip-path="url(#clipPhoneB)">
+    <rect x="315" y="82" width="171" height="304" fill="url(#blurBackdrop)"/>
+    <circle cx="358" cy="126" r="46" fill="#be185d" fill-opacity="0.18"/>
+    <circle cx="448" cy="336" r="52" fill="#ea580c" fill-opacity="0.16"/>
+
+    <rect x="315" y="172" width="171" height="14" fill="url(#frameShadowTop)"/>
+    <rect x="315" y="282" width="171" height="14" fill="url(#frameShadowBot)"/>
+
+    <rect x="332" y="120" width="137" height="34" rx="7" fill="#ffffff"/>
+    <text x="400.5" y="135" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.8" font-weight="800">HE ACTUALLY</text>
+    <text x="400.5" y="146.5" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8.8" font-weight="800">CLEARED THAT</text>
+
+    <!-- 16:9 Stream Frame (171 x 96) -->
+    <rect x="315" y="186" width="171" height="96" fill="url(#skyScene)"/>
+    <circle cx="406" cy="236" r="16" fill="#ffe14d" fill-opacity="0.85"/>
+    <path d="M 315 244 L 332 244 L 332 232 L 344 232 L 344 244 L 356 244 L 356 225 L 372 225 L 372 244 L 384 244 L 384 236 L 396 236 L 396 244 L 424 244 L 424 228 L 438 228 L 438 244 L 452 244 L 452 235 L 468 235 L 468 244 L 486 244 L 486 282 L 315 282 Z" fill="#120d26"/>
+    <polygon points="386,244 414,244 476,282 330,282" fill="#1e2235"/>
+    <line x1="400" y1="246" x2="400" y2="282" stroke="#ffe14d" stroke-width="2" stroke-dasharray="4 3"/>
+    <rect x="321" y="192" width="36" height="25" rx="3" fill="#0f172a" fill-opacity="0.90" stroke="#ffffff" stroke-opacity="0.35" stroke-width="0.8"/>
+    <circle cx="339" cy="202" r="5" fill="#94a3b8"/>
+    <path d="M 330 216 C 330 210, 348 210, 348 216" fill="#94a3b8"/>
+    <circle cx="327" cy="197" r="2" fill="#f43f5e"/>
+
+    <!-- Stroked + active highlight yellow pill captions -->
+    <text x="366" y="315" text-anchor="middle" fill="#ffffff" stroke="#0c0c0e" stroke-width="2.5" paint-order="stroke" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800">NO</text>
+    <rect x="383" y="301" width="38" height="19" rx="4" fill="#ffe14d"/>
+    <text x="402" y="314.5" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="900">WAY</text>
+    <text x="388" y="336" text-anchor="middle" fill="#ffffff" stroke="#0c0c0e" stroke-width="2.5" paint-order="stroke" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800">BRO</text>
+
+    <g fill="#ffffff" fill-opacity="0.22">
+      <circle cx="470" cy="296" r="5.5"/>
+      <circle cx="470" cy="316" r="5.5"/>
+      <circle cx="470" cy="336" r="5.5"/>
+      <rect x="324" y="362" width="78" height="4" rx="2"/>
+      <rect x="324" y="370" width="52" height="3.5" rx="1.75"/>
+    </g>
+  </g>
+  <rect x="315" y="82" width="171" height="304" rx="14" fill="none" stroke="#ffe14d" stroke-opacity="0.65" stroke-width="1.5"/>
+
+  <rect x="286" y="396" width="230" height="42" rx="8" fill="#181c28" stroke="#2a3042"/>
+  <text x="401" y="413" text-anchor="middle" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600">Stroked + pill · Title + emojis</text>
+  <text x="401" y="429" text-anchor="middle" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">+ Public Shorts → Instagram Reels</text>
+
+  <!-- ==================== COLUMN 3: 16:9 COMPANION ==================== -->
+  <text x="738" y="68" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700">16:9 COMPANION (landscape = true)</text>
+
+  <g clip-path="url(#clipWide)">
+    <rect x="544" y="82" width="388" height="218" fill="url(#skyScene)"/>
+    <circle cx="758" cy="186" r="34" fill="#ffe14d" fill-opacity="0.85"/>
+    <path d="M 544 202 L 584 202 L 584 176 L 610 176 L 610 202 L 638 202 L 638 160 L 672 160 L 672 202 L 700 202 L 700 184 L 726 184 L 726 202 L 792 202 L 792 166 L 826 166 L 826 202 L 858 202 L 858 182 L 892 182 L 892 202 L 932 202 L 932 300 L 544 300 Z" fill="#120d26"/>
+    <polygon points="704,202 770,202 908,300 578,300" fill="#1e2235"/>
+    <line x1="737" y1="204" x2="737" y2="300" stroke="#ffe14d" stroke-width="3" stroke-dasharray="8 6"/>
+    <!-- Facecam -->
+    <rect x="558" y="96" width="72" height="50" rx="5" fill="#0f172a" fill-opacity="0.90" stroke="#ffffff" stroke-opacity="0.35"/>
+    <circle cx="594" cy="115" r="10" fill="#94a3b8"/>
+    <path d="M 576 142 C 576 130, 612 130, 612 142" fill="#94a3b8"/>
+    <circle cx="570" cy="107" r="3.5" fill="#f43f5e"/>
+
+    <!-- Top-right resolution pill -->
+    <rect x="744" y="94" width="174" height="22" rx="11" fill="#0e1017" fill-opacity="0.80" stroke="#a78bfa" stroke-opacity="0.50"/>
+    <text x="831" y="108.5" text-anchor="middle" fill="#ede9fe" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600">1920×1080 · FULL STORY</text>
+
+    <!-- Lower-third broadcast captions above bottom 10% -->
+    <rect x="668" y="253" width="140" height="24" rx="5" fill="#000000" fill-opacity="0.78"/>
+    <text x="738" y="269" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="800">
+      <tspan fill="#ffffff">NO </tspan><tspan fill="#ffe14d">WAY </tspan><tspan fill="#ffffff">BRO</tspan>
+    </text>
+  </g>
+  <rect x="544" y="82" width="388" height="218" rx="10" fill="none" stroke="#a78bfa" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- Miniature 1280x720 thumbnail -->
+  <g clip-path="url(#clipThumb)">
+    <rect x="544" y="314" width="176" height="99" fill="url(#skyScene)"/>
+    <circle cx="640" cy="360" r="15" fill="#ffe14d" fill-opacity="0.85"/>
+    <path d="M 544 370 L 568 370 L 568 358 L 584 358 L 584 370 L 604 370 L 604 352 L 622 352 L 622 370 L 664 370 L 664 355 L 682 355 L 682 370 L 720 370 L 720 413 L 544 413 Z" fill="#120d26"/>
+    <!-- Lower-third hook card on thumbnail (2 lines so text has generous side padding) -->
+    <rect x="556" y="376" width="118" height="27" rx="5" fill="#ffffff"/>
+    <text x="615" y="387.5" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="7.5" font-weight="800">HE ACTUALLY</text>
+    <text x="615" y="397.5" text-anchor="middle" fill="#0c0c0e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="7.5" font-weight="800">CLEARED THAT</text>
+    <!-- Duration badge bottom-right -->
+    <rect x="687" y="391" width="27" height="15" rx="3" fill="#000000" fill-opacity="0.85"/>
+    <text x="700.5" y="401.5" text-anchor="middle" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="8.5" font-weight="600">2:14</text>
+  </g>
+  <rect x="544" y="314" width="176" height="99" rx="8" fill="none" stroke="#a78bfa" stroke-opacity="0.45"/>
+  <text x="632" y="431" text-anchor="middle" fill="#9ba3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10">1280×720 thumbnail</text>
+
+  <!-- Companion notes card -->
+  <rect x="734" y="314" width="198" height="124" rx="10" fill="#181c28" stroke="#2a3042"/>
+  <text x="748" y="335" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700">Companion rules</text>
+  <text x="748" y="355" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">• Full uncropped 16:9 frame</text>
+  <text x="748" y="373" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">• Reuses transcript &amp; metadata</text>
+  <text x="748" y="391" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">• Zero extra model calls</text>
+  <text x="748" y="409" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">• No #shorts tag · same profile</text>
+  <text x="748" y="427" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">• Waits for min_gap_minutes</text>
+</svg>

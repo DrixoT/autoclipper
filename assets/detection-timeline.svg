@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 364" width="960" height="364" role="img" aria-label="Chat spike detection and nested story, Short, and Reel timeline">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="960" y2="364" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0e1017"/>
+      <stop offset="100%" stop-color="#131620"/>
+    </linearGradient>
+    <linearGradient id="surgeGrad" x1="0" y1="72" x2="0" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.03"/>
+    </linearGradient>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#ffe14d"/>
+    </marker>
+  </defs>
+
+  <!-- Studio Card -->
+  <rect x="0.5" y="0.5" width="959" height="363" rx="16" fill="url(#cardBg)" stroke="#252a38"/>
+
+  <!-- Header -->
+  <text x="28" y="37" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">FROM CHAT SPIKE TO STORY, SHORT &amp; REEL</text>
+  <text x="932" y="37" text-anchor="end" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10">10-MINUTE RING BUFFER · RELATIVE TO SPIKE ONSET</text>
+
+  <!-- Waveform panel -->
+  <rect x="28" y="52" width="904" height="128" rx="10" fill="#181c28" stroke="#2a3042"/>
+  <line x1="194" y1="58" x2="194" y2="174" stroke="#252a38"/>
+
+  <!-- Left panel annotations -->
+  <text x="42" y="76" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700">Chat velocity</text>
+  <text x="42" y="95" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5">300 s rolling baseline</text>
+  <text x="42" y="114" fill="#f43f5e" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="600">Trigger: z ≥ 2.5</text>
+  <text x="42" y="133" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">≥8 chatters · ≥25% match</text>
+  <text x="42" y="150" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">Closes: 8 s quiet (z &lt; 1.5)</text>
+  <text x="42" y="167" fill="#6d758c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5">or clip requests (≥5 chatters)</text>
+
+  <!-- Vertical aligned time gridlines (x(t) = 200 + (t + 250) * 2.02) -->
+  <!-- -4:00 (-240)=220, -3:00 (-180)=341, -2:00 (-120)=463, -1:00 (-60)=584, event (-22)=661, 0:00=705, +1:00 (+60)=826 -->
+  <g stroke="#252a38" stroke-dasharray="3 4">
+    <line x1="220" y1="60" x2="220" y2="334"/>
+    <line x1="341" y1="60" x2="341" y2="334"/>
+    <line x1="463" y1="60" x2="463" y2="334"/>
+    <line x1="584" y1="60" x2="584" y2="334"/>
+    <line x1="826" y1="60" x2="826" y2="334"/>
+  </g>
+  <!-- Key vertical markers -->
+  <line x1="661" y1="60" x2="661" y2="334" stroke="#ffe14d" stroke-opacity="0.55" stroke-dasharray="4 3"/>
+  <line x1="705" y1="60" x2="705" y2="334" stroke="#f43f5e" stroke-opacity="0.55" stroke-dasharray="4 3"/>
+
+  <!-- Baseline & z=2.5 threshold inside waveform plot -->
+  <line x1="204" y1="154" x2="918" y2="154" stroke="#6d758c" stroke-opacity="0.5" stroke-dasharray="3 3"/>
+  <text x="208" y="149" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9">baseline</text>
+
+  <line x1="204" y1="124" x2="918" y2="124" stroke="#f43f5e" stroke-opacity="0.45" stroke-dasharray="4 3"/>
+  <text x="208" y="119" fill="#fda4af" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9">z = 2.5</text>
+
+  <!-- Chat velocity waveform curve & surge fill -->
+  <path d="M 204 155 L 250 153 L 285 156 L 330 151 L 372 155 L 420 152 L 465 156 L 510 150 L 560 154 L 610 152 L 650 155 L 686 148 L 705 124 L 722 82 L 732 72 L 746 86 L 762 128 L 778 148 L 818 154 L 916 155 L 916 164 L 204 164 Z"
+        fill="url(#surgeGrad)"/>
+  <path d="M 204 155 L 250 153 L 285 156 L 330 151 L 372 155 L 420 152 L 465 156 L 510 150 L 560 154 L 610 152 L 650 155 L 686 148 L 705 124 L 722 82 L 732 72 L 746 86 L 762 128 L 778 148 L 818 154 L 916 155"
+        fill="none" stroke="#f43f5e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="732" cy="72" r="4" fill="#ffe14d"/>
+
+  <!-- Callout: chat reacts after the moment -->
+  <rect x="434" y="64" width="214" height="24" rx="12" fill="#ffe14d" fill-opacity="0.14" stroke="#ffe14d" stroke-opacity="0.45"/>
+  <text x="541" y="79.5" text-anchor="middle" fill="#ffe14d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="600">Chat reacts after the moment ★</text>
+  <line x1="648" y1="76" x2="657" y2="76" stroke="#ffe14d" stroke-width="1.4" marker-end="url(#arrowGold)"/>
+
+  <!-- Reaction chat pills -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600">
+    <rect x="782" y="66" width="66" height="20" rx="10" fill="#252a38" stroke="#384057"/>
+    <text x="815" y="79.5" text-anchor="middle" fill="#f4f5f8">LMAOOO</text>
+
+    <rect x="802" y="92" width="66" height="20" rx="10" fill="#252a38" stroke="#384057"/>
+    <text x="835" y="105.5" text-anchor="middle" fill="#ffe14d">NO WAY</text>
+
+    <rect x="822" y="118" width="68" height="20" rx="10" fill="#252a38" stroke="#384057"/>
+    <text x="856" y="131.5" text-anchor="middle" fill="#fda4af">CLIP IT</text>
+  </g>
+
+  <!-- Time axis labels -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10">
+    <text x="220" y="196" text-anchor="middle" fill="#6d758c">-4:00</text>
+    <text x="341" y="196" text-anchor="middle" fill="#6d758c">-3:00</text>
+    <text x="463" y="196" text-anchor="middle" fill="#6d758c">-2:00</text>
+    <text x="584" y="196" text-anchor="middle" fill="#6d758c">-1:00</text>
+    <text x="661" y="196" text-anchor="end" fill="#ffe14d">event ★</text>
+    <text x="705" y="196" text-anchor="start" fill="#f43f5e">0:00 onset</text>
+    <text x="826" y="196" text-anchor="middle" fill="#6d758c">+1:00</text>
+  </g>
+
+  <!-- Aligned clip tracks -->
+  <!-- Row 1: Raw ring cut (-240 s -> +60 s: x=220..826, w=606) -->
+  <text x="28" y="220" fill="#f4f5f8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600">Raw ring cut</text>
+  <text x="28" y="233" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">lossless .ts copy</text>
+  <rect x="220" y="209" width="606" height="26" rx="6" fill="#34d399" fill-opacity="0.14" stroke="#34d399" stroke-opacity="0.60"/>
+  <text x="523" y="226" text-anchor="middle" fill="#d1fae5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">-240 s before onset → +60 s after (story mode)</text>
+
+  <!-- Row 2: Full Story · 16:9 (x=390..798, w=408) -->
+  <text x="28" y="253" fill="#c4b5fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600">Full Story · 16:9</text>
+  <text x="28" y="266" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">60–300 s window</text>
+  <rect x="390" y="242" width="254" height="26" rx="6" fill="#a78bfa" fill-opacity="0.18" stroke="#a78bfa" stroke-opacity="0.65"/>
+  <text x="517" y="259" text-anchor="middle" fill="#ede9fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Setup (context before moment)</text>
+
+  <rect x="646" y="242" width="58" height="26" rx="5" fill="#ffe14d" fill-opacity="0.22" stroke="#ffe14d" stroke-opacity="0.75"/>
+  <text x="675" y="259" text-anchor="middle" fill="#ffe14d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700">Event ★</text>
+
+  <rect x="706" y="242" width="92" height="26" rx="6" fill="#f43f5e" fill-opacity="0.20" stroke="#f43f5e" stroke-opacity="0.70"/>
+  <text x="752" y="259" text-anchor="middle" fill="#ffe4e6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Reaction</text>
+
+  <!-- Row 3: Vertical Short · 9:16 (x=602..778, w=176) -->
+  <text x="28" y="286" fill="#ffe14d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600">Short · 9:16</text>
+  <text x="28" y="299" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">30–180 s inside story</text>
+  <rect x="602" y="275" width="176" height="26" rx="6" fill="#ffe14d" fill-opacity="0.16" stroke="#ffe14d" stroke-opacity="0.80"/>
+  <text x="690" y="292" text-anchor="middle" fill="#fef08a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Short cut (30–180 s)</text>
+
+  <!-- Row 4: Instagram Reel · 9:16 (anchored 5 s pre-event: x=651..761, w=110) -->
+  <text x="28" y="319" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600">Instagram Reel</text>
+  <text x="28" y="332" fill="#6d758c" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5">≤50 s @ 5 Mbps</text>
+  <rect x="651" y="308" width="110" height="26" rx="6" fill="#e11d48" fill-opacity="0.22" stroke="#f43f5e" stroke-opacity="0.80"/>
+  <text x="706" y="325" text-anchor="middle" fill="#ffe4e6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="600">≤50 s Reel</text>
+  <text x="770" y="325" fill="#9ba3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">5 s pre-event when Short &gt; 50 s</text>
+</svg>
